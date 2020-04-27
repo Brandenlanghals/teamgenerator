@@ -14,7 +14,7 @@ const idArray = [];
 
 
 function appMenu(){
-
+//manager section
 function createManager() {
     console.log("Please build your team");
     inquirer.prompt([
@@ -81,7 +81,7 @@ function createManager() {
   }
 
   function createTeam() {
-
+    //make selections to proceed building team
     inquirer.prompt([
         {
             type: "list",
@@ -106,6 +106,7 @@ function createManager() {
             }
     });
   }
+  //engineer section
   function addEngineer() {
     inquirer.prompt([
       {
@@ -170,6 +171,7 @@ function createManager() {
       createTeam();
     });
   }
+  //intern section
     function addIntern() {
       inquirer.prompt([
         {
