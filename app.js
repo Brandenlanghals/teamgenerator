@@ -239,8 +239,17 @@ function createManager() {
       }
 
   function buildTeam() {
-    fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
+    fs.writeFileSync("./output/team.html", render(teamMembers), "utf-8");
   }
+
+
+  // function buildHtmlPage() {
+  //   let newFile = fs.readFileSync("./templates/main.html")
+  //   fs.writeFileSync("./output/teamPage.html", newFile, function (err) {
+  //       if (err) throw err;
+  //   })
+
+  //   console.log("Base page generated!");
 
   createManager();
 
