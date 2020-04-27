@@ -144,7 +144,7 @@ function createManager() {
         message: "What is your engineer's email address?",
         validate: answer => {
           const pass = answer.match(
-            /^[1-9]\d*$/
+            // /^[1-9]\d*$/
           );
           if (pass) {
             return true;
@@ -206,10 +206,10 @@ function createManager() {
           {
             type: "input",
             name: "internEmail",
-            message: "What is your engineer's email address?",
+            message: "What is your intern's email address?",
             validate: answer => {
               const pass = answer.match(
-                /^[1-9]\d*$/
+                // /^[1-9]\d*$/
               );
               if (pass) {
                 return true;
