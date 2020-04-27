@@ -54,7 +54,7 @@ function createManager() {
           if (pass) {
             return true;
           }
-          return "Please enter a valid email address.";
+          return "Please provide a valid email address.";
         }
       },
       {
@@ -68,7 +68,7 @@ function createManager() {
           if (pass) {
             return true;
           }
-          return "Please enter a positive number greater than zero.";
+          return "Please enter a number greater than zero.";
         }
       }
      //store the object then push  
@@ -85,16 +85,16 @@ function createManager() {
     inquirer.prompt([
         {
             type: "list",
-            name: "memberChoice",
-            message: "Which type of team member would yoy like to add?",
-            coices: [
+            name: "role",
+            message: "Which type of team member would you like to add?",
+            choices: [
                 "Engineer",
                 "Intern",
                 "I don't want to add another team member"
             ]
         }
     ]).then(userChoice => {
-        switch(userChoice.memberChoice) {
+        switch(userChoice.role) {
             case "Engineer":
                 addEngineer();
                 break;
@@ -134,7 +134,7 @@ function createManager() {
             return true;
           }
         }
-          return "Please enter a positive number greater than zero.";
+          return "Please enter a number greater than zero.";
         }
       },
       {
@@ -148,7 +148,7 @@ function createManager() {
           if (pass) {
             return true;
           }
-          return "Please enter a minumum of one character.";
+          return "Please provide a valid email address.";
         }
       },
       {
@@ -245,7 +245,6 @@ function createManager() {
 }
 
 appMenu();
-//Functions left to create - CreateTeam, AddEngineer, AddIntern, BuildTeam
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
